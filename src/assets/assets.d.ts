@@ -6,7 +6,6 @@ declare module "assets" {
     copy: string;
     tick: string;
     articify: string;
-    hero: string;
   };
 
   export = assets;
