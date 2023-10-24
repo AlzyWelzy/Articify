@@ -1,5 +1,5 @@
 import { assets } from "../assets";
-const logo = assets.logo;
+const logo = assets.articify;
 
 const Hero = () => {
   return (
