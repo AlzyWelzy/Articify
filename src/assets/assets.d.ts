@@ -4,7 +4,6 @@ declare module "assets" {
     linkIcon: string;
     loader: string;
     copy: string;
-    logo: string;
     tick: string;
     articify: string;
     hero: string;
