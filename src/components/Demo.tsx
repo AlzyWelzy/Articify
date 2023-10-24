@@ -40,8 +40,6 @@ const Demo = () => {
 
       setArticle(newArticle);
       setAllArticles(updatedAllArticles);
-
-      console.log(newArticle);
     }
   };
 
