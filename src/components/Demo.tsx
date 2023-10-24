@@ -12,7 +12,11 @@ const Demo = () => {
   });
   const [allArticles, setAllArticles] = useState<
     { summary: string; url: string }[]
-  >([]);
+  >(() => {
+    const articlesFromLocalStorage = localStorage.getItem("articles");
+    return articlesFromLocalStorage ? JSON.parse(articlesFromLocalStorage) : [];
+  });
+
   const [copied, setCopied] = useState<string | boolean>("");
   const [getSummary, { error, isFetching }] = useLazyGetSummaryQuery();
 
@@ -23,7 +27,7 @@ const Demo = () => {
       const parsedArticles = JSON.parse(articlesFromLocalStorage);
       setAllArticles(parsedArticles);
     }
-  }, []);
+  }, []); // Empty dependency array to ensure this effect runs only on component mount
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
