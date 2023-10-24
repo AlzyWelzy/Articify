@@ -10,12 +10,10 @@ const Demo = () => {
     url: "",
     summary: "",
   });
+
   const [allArticles, setAllArticles] = useState<
     { summary: string; url: string }[]
-  >(() => {
-    const articlesFromLocalStorage = localStorage.getItem("articles");
-    return articlesFromLocalStorage ? JSON.parse(articlesFromLocalStorage) : [];
-  });
+  >([]);
 
   const [copied, setCopied] = useState<string | boolean>("");
   const [getSummary, { error, isFetching }] = useLazyGetSummaryQuery();
