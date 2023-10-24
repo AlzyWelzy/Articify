@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { FormEvent } from "react";
+import { FormEvent, KeyboardEvent } from "react";
 import { useLazyGetSummaryQuery } from "../services/article";
 import { assets } from "../assets";
 
@@ -52,9 +52,13 @@ const Demo = () => {
     setTimeout(() => setCopied(""), 3000); // Set to an empty string
   };
 
-  const handleKeyDown = (e) => {
+  const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
     if (e.keyCode === 13) {
-      handleSubmit(e);
+      const fakeEvent = {
+        currentTarget: e.currentTarget.form as HTMLFormElement,
+        preventDefault: () => {},
+      };
+      handleSubmit(fakeEvent as FormEvent<HTMLFormElement>);
     }
   };
 
