@@ -48,7 +48,7 @@ const Demo = () => {
     setTimeout(() => setCopied(""), 3000); // Set to an empty string
   };
 
-  const handleKeyDown = (e: any) => {
+  const handleKeyDown = (e) => {
     if (e.keyCode === 13) {
       handleSubmit(e);
     }
