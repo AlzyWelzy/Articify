@@ -7,6 +7,7 @@ declare module "assets" {
     logo: string;
     tick: string;
     articify: string;
+    hero: string;
   };
 
   export = assets;

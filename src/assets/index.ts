@@ -4,6 +4,7 @@ import copy from "./copy.svg";
 import logo from "./logo.svg";
 import tick from "./tick.svg";
 import articify from "./articify.svg";
+import hero from "./hero.svg";
 
 export const assets = {
   linkIcon,
@@ -12,4 +13,5 @@ export const assets = {
   logo,
   tick,
   articify,
+  hero,
 };
