@@ -2,7 +2,7 @@
 
 Articify is an open-source web application that simplifies the process of summarizing lengthy articles using the power of OpenAI's GPT-4. Transforming complex articles into clear and concise summaries has never been easier.
 
-![Articify Screenshot](./public/screenshot.png)
+![Articify Screenshot](public/screenshot.png)
 
 ## Features
 
