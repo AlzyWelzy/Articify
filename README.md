@@ -45,7 +45,7 @@ Follow these steps to run Articify on your local machine:
 4. Start the development server:
 
    ```shell
-   pnpn run dev
+   pnpm run dev
    ```
 
 5. Open your web browser and visit <http://localhost:PORT> to access Articify.
